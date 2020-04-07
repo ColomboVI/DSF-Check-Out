@@ -3,8 +3,7 @@
  *                                                                         *
  * author     : Borja Durán                                                *
  * description:                                                            *
- * - clases que agrupan por idioma determinado 
- texto a la hora de generar los test      *
+ * - clases que agrupan por idioma determinado texto a la hora de generar los test      *
  *                                                                         *
  * TODO                                                                    *
  * ====                                                                    *
@@ -63,7 +62,8 @@ function LocaleFormulariosES ()
     this.getCabeceraTestWorkshop= function()    {        return 'Este cuestionario te permitirá evaluar el workshop realizado por tus compañeros. Valora teniendo en cuenta la rúbrica.';    }
     this.getTituloTestWorkshop= function(workshop)    {        return 'Programa '+this._programa.getNombre()+' - Evaluación de Workshop de '+workshop;    }
     this.getCabeceraEvaluacionTestWorkshop=function(){return 'Vas a evaluar a los siguientes candidatos:';}
-        
+               
+    
 }
 
 

@@ -1,8 +1,6 @@
-/************************
-
-PLANTILLA EVALUACIONES Data Scientist Fundamentals
-
-*************************/
+/*************************************************************************
+* PLANTILLA EVALUACIONES Data Scientist Fundamentals (DSF - ID 24022020) *
+**************************************************************************/
 
 function leerRespuestasWorkshop(workshop)
 {
@@ -32,14 +30,27 @@ function leerRespuestasWorkshop(workshop)
 }
 
 
-function lanzarCuestionarioWorkshop(workshop)
-{
+//function lanzarCuestionarioWorkshop(workshop) {
+//  var evaluados=getEmailsSelected(true).join(';');
+//  var test=TestWorkshop(workshop,evaluados);
+//  (new ThisSheet()).addTestWorkshop(test);
+//  DriveApp.getRootFolder().removeFile(DriveApp.getFileById(test.getFormulario().getId()));
+//  DriveApp.getRootFolder().removeFile(DriveApp.getFileById(test.getExcelAsociado().getId()));
+//  (new Comunicaciones()).mandarEvaluacionWorkshop(getEmailsSelected(false, workshop),evaluados, test.getFormulario(),workshop);
+//}
+
+function generarFormularioWorkshop(ws){
   var evaluados=getEmailsSelected(true).join(';');
-  var test=TestWorkshop(workshop,evaluados);
+  var test=TestWorkshop(ws,evaluados);
   (new ThisSheet()).addTestWorkshop(test);
   DriveApp.getRootFolder().removeFile(DriveApp.getFileById(test.getFormulario().getId()));
   DriveApp.getRootFolder().removeFile(DriveApp.getFileById(test.getExcelAsociado().getId()));
-  (new Comunicaciones()).mandarEvaluacionWorkshop(getEmailsSelected(false, workshop),evaluados, test.getFormulario(),workshop);
+}
+
+function enviarFormularioWorkShop(ws){
+   var evaluados=getEmailsSelected(true).join(';');
+   var test=TestWorkshop(ws,evaluados);
+   (new Comunicaciones()).mandarEvaluacionWorkshop(getEmailsSelected(false, ws),evaluados, test.getFormulario(),ws);
 }
 
 

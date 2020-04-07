@@ -1,14 +1,28 @@
-function lanzarWorkshopPython() {
- // lanzarCuestionarioWorkshop('Python');
- validateEmailPythonYlanzarCuestionarioWorkshop()
+function generarTestWsPython() {
+  validarEmail('Python');
+  generarFormularioWorkshop('Python');
 }
-function lanzarWorkshopSpark() {
-  //lanzarCuestionarioWorkshop('Spark');
-  validateEmailSparkYlanzarCuestionarioWorkshop() 
+function enviarTestWsPython() {
+  validarEmail('Python');
+  enviarFormularioWorkShop('Python');
 }
-function lanzarWorkshopMicro() {
-  //lanzarCuestionarioWorkshop('Spark');
-  validateEmailMicroYlanzarCuestionarioWorkshop() 
+
+function generarTestWsSpark() {
+  validarEmail('Spark');
+  generarFormularioWorkshop('Spark');
+}
+function enviarTestWsSpark() {
+  validarEmail('Spark');
+  enviarFormularioWorkShop('Spark');
+}
+
+function generarTestWsMicro() {
+  validarEmail('Micro');
+  generarFormularioWorkshop('Micro');
+}
+function enviarTestWsMicro() {
+  validarEmail('Micro');
+  enviarFormularioWorkShop('Micro');
 }
 
 function leerCuestionariosWorkshopPython() {
@@ -21,4 +35,9 @@ function leerCuestionariosWorkshopSpark() {
 function leerCuestionariosWorkshopMicro() {
   leerRespuestasWorkshop('Micro');
 }
+
+
+
+
+
 
